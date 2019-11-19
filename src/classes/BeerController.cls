@@ -7,9 +7,9 @@ public with sharing class BeerController {
         String key = '%' + searchKey + '%';
         Integer offset = ((Integer)pageNumber - 1) * pageSize;
         
-        PagedResult r =  new PagedResult(); 
+        PagedResult r =  new PagedResult();
         r.pageSize = pageSize;
-        r.page = (Integer) pageNumber; 
+        r.page = (Integer) pageNumber;
         r.total = [SELECT count() FROM Beer__c 
                       WHERE (Name LIKE :key OR Brewery__r.Name LIKE :key OR Tags__c LIKE :key)
                       AND Alcohol__c >= :minAlcohol];
