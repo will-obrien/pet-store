@@ -16,7 +16,6 @@ public class NewClass {
     return true; 
   }
     
-	@AuraEnabled
     public static List<Account> loadPropertyContactInfo(String accountId, String contactFieldName) {
         // updated to v1.2
         try{
