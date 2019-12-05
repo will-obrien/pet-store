@@ -14,7 +14,27 @@ public class NewClass {
   */
   public boolean isBadExample(){ 
     return true; 
-  } 
+  }
+    
+	@AuraEnabled
+    public static List<Account> loadPropertyContactInfo(String accountId, String contactFieldName) {
+        // updated to v1.2
+        try{
+            // updated to v1.1
+            // String query = 'SELECT id,' + TTH_Utilities.sanitize(contactFieldName)  +' FROM Account WHERE id =: accountId LIMIT 1';
+            String query = 'SELECT id,' + TTH_Utilities.sanitize(contactFieldName)  +' FROM Account WHERE id =\'' + TTH_Utilities.sanitize(accountId) + '\'  LIMIT 1';
+            
+            List<Account> sobjList = Database.query(query); // CodeScan shows error at this line
+            
+            return sobjList;
+            
+        } catch (Exception ex) {
+            TTH_LoggerService.createLogRecord(ex, 'ISO', 'TTH_HomeFooterController', 'loadPropertyContactInfo', null, null,'Error');
+            TTH_LoggerService.save();
+            throw new AuraHandledException(ex.getMessage());
+            // return null;
+        }
+    }
 
   
   private void incrementerTroubles() {
