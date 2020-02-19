@@ -62,4 +62,7 @@ public class NewClass {
     @isTest static void onlyTest(){
         triggerBasicAuraHandledError();
   	}
+  public void documentedEmptyMethod(){
+    //This is empty for a reason...
+  }
 }
