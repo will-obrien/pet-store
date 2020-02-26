@@ -2,8 +2,6 @@
 
 <script>
     var foo = '{!$CurrentPage.parameters.userparam}';
-    alert(foo);
-    var x = $A.x['a']
  </script>
     <apex:outputPanel rendered="{!true && true}"></apex:outputPanel>
 

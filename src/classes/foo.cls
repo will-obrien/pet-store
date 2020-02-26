@@ -1,3 +1,6 @@
+/*
+* Header Comment
+*/
 public class foo extends fooparent{
 
     private string asdf;
