@@ -52,7 +52,7 @@ global with sharing class BINGOController {
     private static final integer querylimit = 10000;
     
     /**
-     * The constructor for BingoController testing
+     * The constructor for BingoController
      */
     
     public BingoController(){
