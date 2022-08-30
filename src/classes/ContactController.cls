@@ -1,5 +1,5 @@
 public with sharing class ContactController {
- 
+ // comment
     @AuraEnabled
     public static List<Contact> findAll() {
         return [SELECT Id, Name from Contact limit 20];
