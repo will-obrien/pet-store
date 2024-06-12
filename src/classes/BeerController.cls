@@ -1,5 +1,4 @@
-public with sharing class BeerController {
-
+public with sharing class BeerController { 
 
     @AuraEnabled
     public static PagedResult findAll(String searchKey, Decimal minAlcohol, Decimal pageNumber) {
@@ -21,4 +20,6 @@ public with sharing class BeerController {
          
         return r;
     }
+
+    
 }
