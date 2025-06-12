@@ -18,6 +18,7 @@ public class NewClass {
 
   
   public void terribleCode(Integer param){
+    //Bad Idea!
     param = 4;
   }
 
