@@ -14,4 +14,8 @@ public class AbsoluteGarbage{
         String key = '%' + name + '%';
         return [SELECT Id, Name FROM Account WHERE Name LIKE :key LIMIT 20];
     } 
+
+    public void badMethod(Integer param){
+        param = 1;
+    }
 }
