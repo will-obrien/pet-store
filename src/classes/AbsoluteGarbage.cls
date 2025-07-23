@@ -1,7 +1,7 @@
 /*
 * This is absolute garbage
 */
-@suppressWarnings('sf:AvoidReassigningParameters')
+@SuppressWarnings('sf:AvoidReassigningParameters')
 public class AbsoluteGarbage{
 
     public AbsoluteGarbage(){
