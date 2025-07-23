@@ -16,6 +16,6 @@ public class AbsoluteGarbage{
     } 
 
     public void badMethod(Integer param){
-        param = 1;
+        param = 1;  // THIS IS A CHANGE 
     }
 }
