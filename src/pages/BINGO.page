@@ -1,10 +1,6 @@
 <apex:page controller="BINGOController" title="Dreamforce BINGO"
     showheader="true" sidebar="false" renderAs="{!chooserender}">
-
     <apex:stylesheet value="{! URLFOR($Resource.BingoCSS) }"/>
-
-{! x=1 || true }
-
     <center><apex:form rendered="{!$CurrentPage.parameters.p == null}">
         <table border="0">
             <tr>
@@ -17,12 +13,10 @@
                     action="{!showAsPDF}" target="_blank" /></center>
                 </td>
             </tr>
-
         </table>
     </apex:form> <c:BingoCard >
         <apex:image id="CollaborationCloud"
             url="{!URLFOR($Resource.ChatterCloud)}" height="200" />
-    </c:BingoCard></center>
-
-
+    </c:BingoCard></center> 	
+	<apex:image url="/resource/TestImage.png" />   
 </apex:page>

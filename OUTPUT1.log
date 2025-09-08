@@ -1,0 +1,57 @@
+
+
+....  # DETERMINES FILES TO BE SCANNED
+
+INFO: Preprocessing files...
+INFO: 6 languages detected in 353 preprocessed files
+INFO: Loading plugins for detected languages
+INFO: Load/download plugins
+INFO: Load/download plugins (done) | time=7ms
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=325ms
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources for coverage: **/aura/**, **/pages/**, **/lwc/**
+INFO: 353 files indexed
+INFO: Quality profile for css: Sonar way
+INFO: Quality profile for js: Salesforce Lightning
+INFO: Quality profile for sf: Will's Copy
+INFO: Quality profile for sfmeta: CodeScan Policies
+INFO: Quality profile for vf: Salesforce Lightning NEW
+INFO: Quality profile for web: Sonar way
+
+... # SCANS EACH LANGUAGE
+
+INFO: Preparing to run CodeScan analysis
+INFO: Preparing to run CodeScan analysis (done) | time=164ms
+
+...
+
+INFO: Execute CodeScan Apex Analysis 25.1.8
+INFO: Execute CodeScan Apex Analysis 25.1.8 (done) | time=7662ms
+INFO: Execute CodeScan VF Analysis 25.1.8
+INFO: Execute CodeScan VF Analysis 25.1.8 (done) | time=243ms
+INFO: Execute CodeScan Meta Analysis 25.1.8
+INFO: Execute CodeScan Meta Analysis 25.1.8 (done) | time=1ms
+INFO: Execute CodeScan Policy Analysis 25.1.8
+INFO: Execute CodeScan Policy Analysis 25.1.8 (done) | time=33ms
+
+... # COMPILES RESULTS AND SENDS TO CODESCAN
+
+INFO: Analysis report generated in 152ms, dir size=1.4 MB
+INFO: Analysis report compressed in 3526ms, zip size=454.6 kB
+INFO: Analysis report uploaded in 2169ms
+INFO: ANALYSIS SUCCESSFUL, you can find the results at: https://app.codescan.io/dashboard?id=log-demonstration
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://app.codescan.io/api/ce/task?id=1fffa157-3b4f-4805-b35e-69ee3672ab48
+
+...
+
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 44.248s
+INFO: Final Memory: 48M/194M
+INFO: ------------------------------------------------------------------------
+
+... # CODESCAN COMPUTES THE BACKGROUND TASK ASYNCHRONOUSLY

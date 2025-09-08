@@ -1,0 +1,294 @@
+ ›   Warning: @salesforce/cli update available from 2.35.6 to 2.104.6.
+(node:19525) Warning: Deprecated config name: apiVersion. Please use org-api-version instead.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Copying sonar scanner binaries from [/Users/will.obrien/.local/share/sf/node_modules/sfdx-codescan-plugin/assets]...
+
+Running command 
+[/usr/bin/java] 
+with arguments 
+-jar
+.sfdx/codescan/sonar-scanner-5.0.1.3007/lib/sonar-scanner-cli-5.0.1.3007.jar
+-Dsonar.host.url=https://app.codescan.io/
+-Dsonar.organization=442
+-Dsonar.login=squ_d9c1f617e3ef80ff796ae02581e65a1ecdef5a46
+-Dsonar.projectKey=log-demonstration
+-Dsonar.working.directory=.sfdx/codescan/sonarworker
+-Dsonar.pullrequest.branch=pr-test
+-Dsonar.pullrequest.base=master
+-Dsonar.pullrequest.key=1
+
+INFO: Scanner configuration file: NONE
+INFO: Project root configuration file: /Users/will.obrien/Dev/pet-store/sonar-project.properties
+INFO: SonarScanner 5.0.1.3007
+INFO: Java 17.0.11 Oracle Corporation (64-bit)
+INFO: Mac OS X 15.6.1 aarch64
+INFO: User cache: /Users/will.obrien/.sonar/cache
+INFO: Analyzing on SonarQube server 24.12.0.100206
+INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
+INFO: Load global settings
+INFO: Load global settings (done) | time=538ms
+INFO: Server id: 9FAD2FB4-AWAl38WPUd0XZTKFeFfY
+INFO: Loading required plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=229ms
+INFO: Load/download plugins
+INFO: Load/download plugins (done) | time=34ms
+INFO: Configuring Mule Plugin
+INFO: Process project properties
+INFO: Process project properties (done) | time=0ms
+INFO: Project key: log-demonstration
+INFO: Load project settings for component key: 'log-demonstration'
+INFO: Load project settings for component key: 'log-demonstration' (done) | time=127ms
+INFO: Load project branches
+INFO: Load project branches (done) | time=118ms
+INFO: Load branch configuration
+INFO: Load branch configuration (done) | time=1ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=165ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=3736ms
+INFO: Load analysis cache
+INFO: Load analysis cache | time=119ms
+INFO: Pull request 1 for merge into master from pr-test
+WARN: The property 'sonar.login' is deprecated and will be removed in the future. Please use the 'sonar.token' property instead when passing a token.
+INFO: Preprocessing files...
+INFO: 6 languages detected in 338 preprocessed files
+INFO: 18 files ignored because of inclusion/exclusion patterns
+INFO: Loading plugins for detected languages
+INFO: Load/download plugins
+INFO: Load/download plugins (done) | time=4ms
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=130ms
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources: **/Bee?*
+INFO:   Excluded sources for coverage: **/aura/**, **/pages/**, **/lwc/**
+INFO:   Excluded sources for duplication: **/*Cyclomatic*
+INFO: 338 files indexed
+INFO: Quality profile for css: Sonar way
+INFO: Quality profile for js: Salesforce Lightning
+INFO: Quality profile for sf: Will's Copy
+INFO: Quality profile for sfmeta: CodeScan Policies
+INFO: Quality profile for vf: Salesforce Lightning NEW
+INFO: Quality profile for web: Sonar way
+INFO: ------------- Run sensors on module log-demonstration
+INFO: Configuring Mule Plugin
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=119ms
+INFO: Sensor CodeScan indexer [codescan]
+INFO: Running version 25.1.9-b737e
+INFO: Project has 7594 lines
+INFO: CodeScan is licensed. Project log-demonstration size is 7594 lines
+INFO: Sensor CodeScan indexer [codescan] (done) | time=631ms
+INFO: Sensor CodeScan parser [codescan]
+ERROR: error while parsing file 'src/pages/textContent.page'
+com.villagechief.pmd.lang.vf.ast.ParseException: Encountered " <LST_ERROR> "  "" at line 13, column 24.
+Was expecting:
+    <TAG_NAME> ...
+    
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.generateParseException(VisualForceParser.java:1524)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.jj_consume_token(VisualForceParser.java:1403)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.Element(VisualForceParser.java:508)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.ContentElement(VisualForceParser.java:194)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.Content(VisualForceParser.java:174)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.Element(VisualForceParser.java:528)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.ContentElement(VisualForceParser.java:194)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.Content(VisualForceParser.java:174)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.Document(VisualForceParser.java:67)
+	at com.villagechief.pmd.lang.vf.AbstractVisualForceParser.parse(AbstractVisualForceParser.java:70)
+	at com.villagechief.pmd.lang.vf.AbstractVisualForceParser.parse(AbstractVisualForceParser.java:63)
+	at com.villagechief.sonar.salesforce.core.SalesforceParser.parseSourceCode(SalesforceParser.java:224)
+	at com.villagechief.sonar.salesforce.core.SalesforceParser.parseWebFiles(SalesforceParser.java:154)
+	at com.villagechief.sonar.salesforce.core.SalesforceParser.execute(SalesforceParser.java:98)
+	at org.sonar.scanner.sensor.AbstractSensorWrapper.analyse(AbstractSensorWrapper.java:64)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.execute(ModuleSensorsExecutor.java:88)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.lambda$execute$1(ModuleSensorsExecutor.java:61)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.withModuleStrategy(ModuleSensorsExecutor.java:79)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.execute(ModuleSensorsExecutor.java:61)
+	at org.sonar.scanner.scan.SpringModuleScanContainer.doAfterStart(SpringModuleScanContainer.java:82)
+	at org.sonar.core.platform.SpringComponentContainer.startComponents(SpringComponentContainer.java:226)
+	at org.sonar.core.platform.SpringComponentContainer.execute(SpringComponentContainer.java:205)
+	at org.sonar.scanner.scan.SpringProjectScanContainer.scan(SpringProjectScanContainer.java:201)
+	at org.sonar.scanner.scan.SpringProjectScanContainer.scanRecursively(SpringProjectScanContainer.java:197)
+	at org.sonar.scanner.scan.SpringProjectScanContainer.doAfterStart(SpringProjectScanContainer.java:170)
+	at org.sonar.core.platform.SpringComponentContainer.startComponents(SpringComponentContainer.java:226)
+	at org.sonar.core.platform.SpringComponentContainer.execute(SpringComponentContainer.java:205)
+	at org.sonar.scanner.bootstrap.SpringScannerContainer.doAfterStart(SpringScannerContainer.java:355)
+	at org.sonar.core.platform.SpringComponentContainer.startComponents(SpringComponentContainer.java:226)
+	at org.sonar.core.platform.SpringComponentContainer.execute(SpringComponentContainer.java:205)
+	at org.sonar.scanner.bootstrap.SpringGlobalContainer.doAfterStart(SpringGlobalContainer.java:144)
+	at org.sonar.core.platform.SpringComponentContainer.startComponents(SpringComponentContainer.java:226)
+	at org.sonar.core.platform.SpringComponentContainer.execute(SpringComponentContainer.java:205)
+	at org.sonar.batch.bootstrapper.Batch.doExecute(Batch.java:73)
+	at org.sonar.batch.bootstrapper.Batch.execute(Batch.java:67)
+	at org.sonarsource.scanner.api.internal.batch.BatchIsolatedLauncher.execute(BatchIsolatedLauncher.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherProxy.invoke(IsolatedLauncherProxy.java:60)
+	at jdk.proxy1/jdk.proxy1.$Proxy0.execute(Unknown Source)
+	at org.sonarsource.scanner.api.EmbeddedScanner.doExecute(EmbeddedScanner.java:189)
+	at org.sonarsource.scanner.api.EmbeddedScanner.execute(EmbeddedScanner.java:138)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:126)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:81)
+	at org.sonarsource.scanner.cli.Main.main(Main.java:62)
+
+ERROR: error while parsing file 'src/pages/testParse.page'
+com.villagechief.pmd.lang.vf.ast.ParseException: Encountered "<EOF>" at line 13, column 12.
+Was expecting one of:
+    <HTML_SCRIPT_END_TAG> ...
+    <EL_EXPRESSION_IN_SCRIPT> ...
+    <HTML_SCRIPT_CONTENT> ...
+    <HTML_SCRIPT_CONTENT> ...
+    
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.generateParseException(VisualForceParser.java:1524)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.jj_consume_token(VisualForceParser.java:1403)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.HtmlScript(VisualForceParser.java:942)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.ContentElement(VisualForceParser.java:200)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.Content(VisualForceParser.java:174)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.Element(VisualForceParser.java:528)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.ContentElement(VisualForceParser.java:194)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.Content(VisualForceParser.java:174)
+	at com.villagechief.pmd.lang.vf.ast.VisualForceParser.Document(VisualForceParser.java:67)
+	at com.villagechief.pmd.lang.vf.AbstractVisualForceParser.parse(AbstractVisualForceParser.java:70)
+	at com.villagechief.pmd.lang.vf.AbstractVisualForceParser.parse(AbstractVisualForceParser.java:63)
+	at com.villagechief.sonar.salesforce.core.SalesforceParser.parseSourceCode(SalesforceParser.java:224)
+	at com.villagechief.sonar.salesforce.core.SalesforceParser.parseWebFiles(SalesforceParser.java:154)
+	at com.villagechief.sonar.salesforce.core.SalesforceParser.execute(SalesforceParser.java:98)
+	at org.sonar.scanner.sensor.AbstractSensorWrapper.analyse(AbstractSensorWrapper.java:64)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.execute(ModuleSensorsExecutor.java:88)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.lambda$execute$1(ModuleSensorsExecutor.java:61)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.withModuleStrategy(ModuleSensorsExecutor.java:79)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.execute(ModuleSensorsExecutor.java:61)
+	at org.sonar.scanner.scan.SpringModuleScanContainer.doAfterStart(SpringModuleScanContainer.java:82)
+	at org.sonar.core.platform.SpringComponentContainer.startComponents(SpringComponentContainer.java:226)
+	at org.sonar.core.platform.SpringComponentContainer.execute(SpringComponentContainer.java:205)
+	at org.sonar.scanner.scan.SpringProjectScanContainer.scan(SpringProjectScanContainer.java:201)
+	at org.sonar.scanner.scan.SpringProjectScanContainer.scanRecursively(SpringProjectScanContainer.java:197)
+	at org.sonar.scanner.scan.SpringProjectScanContainer.doAfterStart(SpringProjectScanContainer.java:170)
+	at org.sonar.core.platform.SpringComponentContainer.startComponents(SpringComponentContainer.java:226)
+	at org.sonar.core.platform.SpringComponentContainer.execute(SpringComponentContainer.java:205)
+	at org.sonar.scanner.bootstrap.SpringScannerContainer.doAfterStart(SpringScannerContainer.java:355)
+	at org.sonar.core.platform.SpringComponentContainer.startComponents(SpringComponentContainer.java:226)
+	at org.sonar.core.platform.SpringComponentContainer.execute(SpringComponentContainer.java:205)
+	at org.sonar.scanner.bootstrap.SpringGlobalContainer.doAfterStart(SpringGlobalContainer.java:144)
+	at org.sonar.core.platform.SpringComponentContainer.startComponents(SpringComponentContainer.java:226)
+	at org.sonar.core.platform.SpringComponentContainer.execute(SpringComponentContainer.java:205)
+	at org.sonar.batch.bootstrapper.Batch.doExecute(Batch.java:73)
+	at org.sonar.batch.bootstrapper.Batch.execute(Batch.java:67)
+	at org.sonarsource.scanner.api.internal.batch.BatchIsolatedLauncher.execute(BatchIsolatedLauncher.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherProxy.invoke(IsolatedLauncherProxy.java:60)
+	at jdk.proxy1/jdk.proxy1.$Proxy0.execute(Unknown Source)
+	at org.sonarsource.scanner.api.EmbeddedScanner.doExecute(EmbeddedScanner.java:189)
+	at org.sonarsource.scanner.api.EmbeddedScanner.execute(EmbeddedScanner.java:138)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:126)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:81)
+	at org.sonarsource.scanner.cli.Main.main(Main.java:62)
+
+INFO: Preparing to run CodeScan analysis
+INFO: Preparing to run CodeScan analysis (done) | time=172ms
+INFO: Sensor CodeScan parser [codescan] (done) | time=509ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML is restricted to changed files only
+INFO: Sensor HTML [web] (done) | time=3ms
+INFO: Sensor JaCoCo XML Report Importer [jacoco]
+INFO: 'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+INFO: No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+INFO: Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+INFO: Sensor Compute size of configuration file [mulevalidationsonarqubepluginmule]
+INFO: Sensor Compute size of configuration file [mulevalidationsonarqubepluginmule] (done) | time=0ms
+INFO: Sensor Compute number of unit test cases [mulevalidationsonarqubepluginmule]
+INFO: Sensor Compute number of unit test cases [mulevalidationsonarqubepluginmule] (done) | time=0ms
+INFO: Sensor Unit Test Runner [codescan]
+INFO: Sensor Unit Test Runner [codescan] (done) | time=0ms
+INFO: Sensor CodeScan Checks [codescan]
+INFO: Execute CodeScan Apex Analysis 25.1.9
+INFO: Execute CodeScan Apex Analysis 25.1.9 (done) | time=1000ms
+INFO: Execute CodeScan VF Analysis 25.1.9
+INFO: Execute CodeScan VF Analysis 25.1.9 (done) | time=103ms
+INFO: Execute CodeScan Meta Analysis 25.1.9
+INFO: Execute CodeScan Meta Analysis 25.1.9 (done) | time=1ms
+INFO: Execute CodeScan Policy Analysis 25.1.9
+INFO: Execute CodeScan Policy Analysis 25.1.9 (done) | time=34ms
+INFO: Execute Apex Metrics
+INFO: Execute Apex Metrics (done) | time=1149ms
+INFO: Execute VF Metrics
+INFO: Execute VF Metrics (done) | time=407ms
+INFO: Sensor CodeScan Checks [codescan] (done) | time=2696ms
+INFO: Sensor cs-vf Checks [codescanlang]
+INFO: Running CodeScanLang
+INFO: Use workDir=/Users/will.obrien/Dev/pet-store
+INFO: Sensor cs-vf Checks [codescanlang] (done) | time=6384ms
+INFO: Sensor cs-js Checks [codescanlang]
+INFO: Running CodeScanLang
+INFO: Use workDir=/Users/will.obrien/Dev/pet-store
+INFO: Sensor cs-js Checks [codescanlang] (done) | time=1351ms
+INFO: Sensor JavaScript/TypeScript analysis [javascript]
+INFO: Detected os: Mac OS X arch: aarch64 alpine: false. Platform: DARWIN_ARM64
+INFO: Using Node.js executable: '/Users/will.obrien/Dev/pet-store/.sfdx/codescan/sonarworker/.sonartmp/bridge-bundle/package/bin/run-node'.
+INFO: Memory configuration: OS (16384 MB), Node.js (4144 MB).
+WARN: Access to the multi-values/property set property 'sonar.javascript.file.suffixes' should be made using 'getStringArray' method. The SonarQube plugin using this property should be updated.
+WARN: Access to the multi-values/property set property 'sonar.typescript.file.suffixes' should be made using 'getStringArray' method. The SonarQube plugin using this property should be updated.
+INFO: Found 0 tsconfig.json file(s): []
+INFO: Creating TypeScript program
+INFO: TypeScript configuration file /var/folders/74/rlyv5rm576j87j7ghy28xxlm0000gr/T/tmp-19711-EtUksDQwQtPd
+INFO: 23 source files to be analyzed
+INFO: Starting analysis with current program
+INFO: Analyzed 23 file(s) with current program
+INFO: 23/23 source files have been analyzed
+INFO: Hit the cache for 23 out of 23
+INFO: Miss the cache for 0 out of 23
+INFO: Sensor JavaScript/TypeScript analysis [javascript] (done) | time=2214ms
+INFO: Sensor JavaScript inside HTML analysis [javascript]
+INFO: 1 source file to be analyzed
+INFO: 1/1 source file has been analyzed
+INFO: Hit the cache for 1 out of 1
+INFO: Miss the cache for 0 out of 1
+INFO: Sensor JavaScript inside HTML analysis [javascript] (done) | time=7ms
+INFO: Sensor CSS Rules [javascript]
+INFO: Sensor CSS Rules is restricted to changed files only
+INFO: No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+INFO: Sensor CSS Rules [javascript] (done) | time=1ms
+INFO: Sensor CSS Metrics [javascript]
+INFO: Sensor CSS Metrics is restricted to changed files only
+INFO: Sensor CSS Metrics [javascript] (done) | time=0ms
+INFO: Sensor Apex CPD [codescan]
+INFO: Copy-paste detection exclusions:
+  **/*Cyclomatic*
+INFO: Sensor Apex CPD [codescan] (done) | time=170ms
+INFO: Sensor VisualForce/Lightning CPD [codescan]
+INFO: Copy-paste detection exclusions:
+  **/*Cyclomatic*
+INFO: Sensor VisualForce/Lightning CPD [codescan] (done) | time=46ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=0ms
+INFO: SCM Publisher is disabled
+INFO: CPD Executor 61 files had no CPD blocks
+INFO: CPD Executor Calculating CPD for 67 files
+INFO: CPD Executor CPD calculation finished (done) | time=65ms
+INFO: Analysis report generated in 94ms, dir size=236.3 kB
+INFO: Analysis report compressed in 147ms, zip size=95.7 kB
+INFO: Analysis report uploaded in 367ms
+INFO: ANALYSIS SUCCESSFUL, you can find the results at: https://app.codescan.io/dashboard?id=log-demonstration&pullRequest=1
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://app.codescan.io/api/ce/task?id=3d28968b-df75-4f8e-bf92-d3ee65b3e806
+INFO: Executing post-job 'CodeScan Reporter'
+INFO: CodeScan reports generation is not enabled.
+INFO: Executing post-job 'Comparison Branches Feature check'
+INFO: Analysis total time: 20.653 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 22.871s
+INFO: Final Memory: 48M/188M
+INFO: ------------------------------------------------------------------------
+Waiting for SonarQube Background Task...... done
+Quality Gate failed
+See more details on the dashboard URL above
+ERROR running codescan:run:  Quality Gate failed
