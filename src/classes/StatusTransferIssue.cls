@@ -26,4 +26,7 @@ public class StatusTransferIssue{
         param = 'fire bug for the last time this time';
     } 
 
+    public void itWasntTheLastTime(String param){
+        param = 'this is complicated';
+    } 
 }
