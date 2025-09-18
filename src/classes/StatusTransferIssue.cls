@@ -20,6 +20,10 @@ public class StatusTransferIssue{
 
     public void bugFireAgainAndAgain(String param){
         param = 'fire bug again and again';
+    }
+
+    public void bugFireLast(String param){
+        param = 'fire bug for the last time';
     } 
 
 }
