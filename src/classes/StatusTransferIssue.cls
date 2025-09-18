@@ -22,8 +22,8 @@ public class StatusTransferIssue{
         param = 'fire bug again and again';
     }
 
-    public void bugFireLast(String param){
-        param = 'fire bug for the last time';
+    public void bugFireLastForReal(String param){
+        param = 'fire bug for the last time this time';
     } 
 
 }
