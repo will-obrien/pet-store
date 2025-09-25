@@ -2,7 +2,7 @@
 * This is absolute garbage
 */
 
-p ublic without sharing class AddBulkCLTProductsController{
+public without sharing class AddBulkCLTProductsController{
 public class AbsoluteGarbage{
 
     public AbsoluteGarbage(){
