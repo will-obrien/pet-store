@@ -4,6 +4,8 @@
 
 public without sharing class AddBulkCLTProductsController{
 public class AbsoluteGarbage{
+//changing something so it's there 
+
 
     public AbsoluteGarbage(){
         //Empty constructor 
