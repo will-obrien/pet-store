@@ -15,4 +15,4 @@ public class AbsoluteGarbage{
         return [SELECT Id, Name FROM Account WHERE Name LIKE :key LIMIT 20];
     } 
 
-}
+} // Quick change
