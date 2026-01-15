@@ -1,8 +1,6 @@
 /*
 * This is absolute garbage
 *
-* Messing up the lines
-*
 */
 public class AbsoluteGarbage{
 
