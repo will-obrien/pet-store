@@ -39,6 +39,7 @@ steps:
        {
          $Target = "$env:BUILD_SOURCEBRANCH"
          $Target = $Target.Replace('refs/heads/','')
+         Write-Host "$Target"
          $URL = "https://app.codescan.io/api/qualitygates/project_status?projectKey=new&branch={0}"
        } 
        
