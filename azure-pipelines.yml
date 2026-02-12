@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -10,8 +11,21 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- task: CodeScanCloudPrepare@1
+  inputs:
+    CodeScanCloud: 'CodeSCan US'
+    organization: 'yana'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'new'
+    cliProjectName: 'new'
+    cliSources: '.'
+- task: CodeScanCloudAnalyze@1
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
+- task: CodeScanCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
