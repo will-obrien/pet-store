@@ -1,6 +1,5 @@
 /*
 * This is absolute garbage
-*
 */
 
 public without sharing class AddBulkCLTProductsController{
@@ -19,8 +18,5 @@ public class AbsoluteGarbage{
         String key = '%' + name + '%';
         return [SELECT Id, Name FROM Account WHERE Name LIKE :key LIMIT 20];
     } 
-    public void badTime(String param){
-        param = 'hello';
-    }
 
 }
