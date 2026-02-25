@@ -18,5 +18,7 @@ public class AbsoluteGarbage{
     public void badTime(String param){
         param = 'hello';
     }
-
+    public void badTime2(String param){
+        param = 'hello';
+    }
 }
