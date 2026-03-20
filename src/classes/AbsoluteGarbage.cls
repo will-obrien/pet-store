@@ -24,4 +24,10 @@ public class AbsoluteGarbage{
     public void badTime2(String param){
         param = 'hello';
     }
+
+    public void straightUpBadPractice(String[] names){
+        for (String name : names) {
+            findByName(name);
+        }
+    }
 }
