@@ -54,6 +54,10 @@ global with sharing class BINGOController {
     /**
      * The constructor for BingoController
      */
+
+    public void badMethod(Integer param){
+        param=4;
+    }
     
     public BingoController(){
         Cookie userCookie = new Cookie('CookieName', 'Test', null, 315569260, false);
