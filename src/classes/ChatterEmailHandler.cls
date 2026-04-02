@@ -1,7 +1,7 @@
 global class ChatterEmailHandler implements Messaging.InboundEmailHandler {
     global Messaging.InboundEmailResult handleInboundEmail(Messaging.InboundEmail email, Messaging.InboundEnvelope envelope) {
 
-        //create result for email operation
+        //create result for email operationZczxcZXCZXCZCXZC
         Messaging.InboundEmailResult result = new Messaging.InboundEmailresult();
             try{
                User user = [select id from User where email = :email.fromAddress];
