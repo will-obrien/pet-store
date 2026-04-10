@@ -1,6 +1,6 @@
 /*
 * This is absolute garbage
-*
+* Adding for change check
 */
 public class AbsoluteGarbage{
 
