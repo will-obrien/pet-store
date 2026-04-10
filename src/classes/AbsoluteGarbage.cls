@@ -1,6 +1,6 @@
 /*
 * This is absolute garbage
-*
+* Adding for change check
 */
 public class AbsoluteGarbage{
 
@@ -23,5 +23,33 @@ public class AbsoluteGarbage{
     */
     public void badTime2(String param){
         param = 'hello';
+    }
+
+    public List<Account> straightUpBadPractice(String[] names){
+        if (names == null) {
+            return new List<Account>();
+        }
+
+        Set<String> namesSet = new Set<String>();
+        for (String name : names) {
+            if (String.isNotBlank(name)) {
+                namesSet.add(name);
+            }
+        }
+
+        if (namesSet.isEmpty()) {
+            return new List<Account>();
+        }
+
+        String searchConditions = '';
+        for (String name : namesSet) {
+            if (searchConditions != '') {
+                searchConditions += ' OR ';
+            }
+            searchConditions += 'Name LIKE \'%' + String.escapeSingleQuotes(name) + '%\'';
+        }
+
+        String query = 'SELECT Id, Name FROM Account WHERE ' + searchConditions + ' LIMIT 20';
+        return Database.query(query);
     }
 }
