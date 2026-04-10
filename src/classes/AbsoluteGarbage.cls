@@ -25,9 +25,31 @@ public class AbsoluteGarbage{
         param = 'hello';
     }
 
-    public void straightUpBadPractice(String[] names){
-        for (String name : names) {
-            findByName(name);
+    public List<Account> straightUpBadPractice(String[] names){
+        if (names == null) {
+            return new List<Account>();
         }
+
+        Set<String> namesSet = new Set<String>();
+        for (String name : names) {
+            if (String.isNotBlank(name)) {
+                namesSet.add(name);
+            }
+        }
+
+        if (namesSet.isEmpty()) {
+            return new List<Account>();
+        }
+
+        String searchConditions = '';
+        for (String name : namesSet) {
+            if (searchConditions != '') {
+                searchConditions += ' OR ';
+            }
+            searchConditions += 'Name LIKE \'%' + String.escapeSingleQuotes(name) + '%\'';
+        }
+
+        String query = 'SELECT Id, Name FROM Account WHERE ' + searchConditions + ' LIMIT 20';
+        return Database.query(query);
     }
 }
